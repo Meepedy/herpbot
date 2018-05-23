@@ -22,14 +22,15 @@ const retweet = () => {
     },
     (err, data, response) => {
       if (err) {
-        console.log('Cannot Search Tweet!, Description here: ', err)
+        console.log('Cannot Search Tweet!, Description here: ', err);
+        console.log(response);
       } else {
 
-        const rando = Math.floor(Math.random() * data.statuses.length)
-        let retweetId
+        const rando = Math.floor(Math.random() * data.statuses.length);
+        let retweetId;
 
         if (!isReply(data.statuses[rando])) {
-          retweetId = data.statuses[rando].id_str
+          retweetId = data.statuses[rando].id_str;
         }
 
         bot.post(
@@ -39,14 +40,15 @@ const retweet = () => {
           },
           (err, response) => {
             if (err) {
-              console.log('RETWEET ERROR');
+              console.log('RETWEET ERROR:', err);
+              console.log(response);
             }
-            console.log('RETWEET SUCCESS: ', data.statuses[rando].text)
+            console.log('RETWEET SUCCESS: ', data.statuses[rando].text);
           }
-        )
+        );
       }
     }
-  )
-}
+  );
+};
 
-module.exports = retweet
+module.exports = retweet;

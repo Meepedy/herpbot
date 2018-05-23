@@ -27,8 +27,8 @@ const port = process.env.PORT || 3000;
 if (!module.parent){
   if (!port){
     throw new Error('Forgot to specify PORT');
-  };
-};
+  }
+}
 server.listen(port, () => {
   console.log(`Listening on port ${port}...`);
 });
