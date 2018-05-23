@@ -1,0 +1,28 @@
+{
+  "name": "herpbot",
+  "version": "1.0.0",
+  "description": "a twitter bot that follows #herping",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lint": "eslint .",
+    "lintf": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herpbot/herpbot.git"
+  },
+  "author": "David Becker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herpbot/herpbot/issues"
+  },
+  "homepage": "https://github.com/herpbot/herpbot#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "twit": "^2.2.9",
+    "unique-random-array": "^1.0.1"
+  }
+}
