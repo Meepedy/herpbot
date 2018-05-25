@@ -26,11 +26,11 @@ const retweet = () => {
         console.log(response);
       } else {
 
-        const rando = Math.floor(Math.random() * data.statuses.length);
+        const random = Math.floor(Math.random() * data.statuses.length);
         let retweetId;
 
-        if (!isReply(data.statuses[rando])) {
-          retweetId = data.statuses[rando].id_str;
+        if (!isReply(data.statuses[random])) {
+          retweetId = data.statuses[random].id_str;
         }
 
         bot.post(
@@ -43,7 +43,7 @@ const retweet = () => {
               console.log('RETWEET ERROR:', err);
               console.log(response);
             }
-            console.log('RETWEET SUCCESS: ', data.statuses[rando].text);
+            console.log('RETWEET SUCCESS: ', data.statuses[random].text);
           }
         );
       }
